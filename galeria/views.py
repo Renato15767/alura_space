@@ -1,11 +1,13 @@
 """" views.py cuida do que vai ser exibido em cada página e 
-     qual conteúdo vão ter """
+     qual conteúdo vão ter
+"""
 
 from django.shortcuts import render
 
 # Create your views here.
 # Será criado uma def quando tiver um novo arq. html
 
+# index() é responsável pela pág. principal da nossa aplicação
 def index(request):
     return render(request, 'galeria/index.html')
 

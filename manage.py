@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
+#Manage.py será responsável por vários comandos
 import os
 import sys
 

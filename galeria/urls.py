@@ -1,4 +1,7 @@
-"""" Ela será isolada """
+"""" 
+- Ela será isolada.
+
+ """
 
 from django.urls import path
 from galeria.views import index, imagem

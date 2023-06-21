@@ -10,9 +10,22 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+"""
+- Nesse arq. irá ter as configurações de idioma da nossa aplicação.
+
+- Fica também armazenado a Secret Key do projeto (não pode subir no github).
+  Obs: ela fica no .env, que é onde fica as var de ambiente
+
+- Em "INSTALLED_APPS" ficam os apps declarados do nosso projeto
+
+"""
+
+# "os" será usado para manipular os arq.
 from pathlib import Path, os
+# Irá carregar as variáveis de ambiente
 from dotenv import load_dotenv
 
+# Carrega as var de ambiente
 load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,6 +36,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# "os.getenv" pega a Secret Key do .env e "str" transforma em string
 SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -32,7 +46,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
+# Em "INSTALLED_APPS" ficam os apps declarados do nosso projeto
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -108,6 +122,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
+
+# Onde pode ser alterado o idioma do nosso projeto
 
 LANGUAGE_CODE = 'pt-br'
 
